@@ -1,0 +1,55 @@
+const { Builder, By, Key, Actions, WebDriver, ChromiumWebDriver, } = require("selenium-webdriver");
+//const { SeleniumServer } = require("selenium-webdriver/remote");
+var should = require("chai").should();
+
+
+
+
+
+//describe block 
+describe("Sign up to QID", function () {
+
+    //it block 
+    it("successfully registered", async function () {
+        //launch the browser
+        let driver = await new Builder().forBrowser("chrome").build();
+
+        
+        //const actions = driver.actions();
+
+        let counter = 914; 
+
+        //navigate to uor application
+        await driver.get("https://qorpo.world/qorpo-id/register");
+
+        driver.manage().window().maximize();
+
+        await driver.findElement(By.xpath('//*[@id="cookiefirst-root"]/div/div/div[2]/div[2]/div[2]/div[1]/button/span')).click();
+
+        console.log('Coockies accepted');
+
+        await driver.findElement(By.xpath('/html/body/app-root/app-site-layout/div[4]/app-register/div/div/div/div[2]/p')).click();
+
+        await driver.findElement(By.xpath('//*[@id="email"]')).sendKeys('yaroslav.bilozir+'+ counter +'@qorpo.co');
+
+        await driver.findElement(By.xpath('//*[@id="nick"]')).sendKeys('NickName' + counter);
+
+        await driver.findElement(By.xpath('//*[@id="password"]')).sendKeys('985630Joker');
+
+        await driver.findElement(By.xpath('//*[@id="confirm-password"]')).sendKeys('985630Joker');
+        //banner
+        await driver.findElement(By.xpath('/html/body/app-root/app-site-layout/div[4]/app-register/app-sticky-banner/div/div[2]')).click();
+
+        await driver.findElement(By.xpath('/html/body/app-root/app-site-layout/div[4]/app-register/div/div/div/form/div[5]/div/div')).click();
+
+        
+
+        await driver.findElement(By.xpath('/html/body/app-root/app-site-layout/div[4]/app-register/div/div/div/form/button')).click();
+
+        await driver.sleep(5000);
+        await driver.quit();
+
+
+    });
+
+});
