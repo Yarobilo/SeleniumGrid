@@ -13,7 +13,7 @@ describe("Login and accept coockies", function () {
     //it block 
     it("successfully Logged in and accepted coockies", async function () {
         //launch the browser
-        let driver = await new Builder().forBrowser("chrome").usingServer("http://18.234.61.253:4445/").build();
+        let driver = await new Builder().forBrowser("firefox").usingServer("http://18.234.61.253:4445/").build();
 
 
 
@@ -50,7 +50,7 @@ describe("Login and accept coockies", function () {
 
      it("Transfer nft and IOI", async function () {
         //launch the browser
-        let driver = await new Builder().forBrowser("chrome").usingServer("http://18.234.61.253:4445/").build();
+        let driver = await new Builder().forBrowser("firefox").usingServer("http://18.234.61.253:4445/").build();
 
 
 
@@ -123,7 +123,7 @@ describe("Login and accept coockies", function () {
 
     it("Checking Social Links", async function () {
         //launch the browser
-        let driver = await new Builder().forBrowser("chrome").usingServer("http://18.234.61.253:4445/").build();
+        let driver = await new Builder().forBrowser("firefox").usingServer("http://18.234.61.253:4445/").build();
 
         let linltrTwitter = 'https://linktr.ee/qorpotwitters'
         let linktrTelegram = 'https://linktr.ee/qorpotelegram'
